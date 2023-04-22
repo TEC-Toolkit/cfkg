@@ -1,4 +1,4 @@
-Publlisher: BEIS (UK)
+Publisher: BEIS (UK)
 
 Mapping conversion for year 2021 (data  has been mapped to Wikidata using OpenRefine)
 
