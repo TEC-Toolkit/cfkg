@@ -1,0 +1,210 @@
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q3517751> rdfs:label "time"@en .
+
+<http://www.wikidata.org/entity/Q1053879> rdfs:label "thermal design power"@en .
+
+<http://www.wikidata.org/entity/Q12725> rdfs:label "electricity"@en .
+
+<http://www.wikidata.org/entity/Q1933140> rdfs:label "carbon dioxide equivalent"@en;
+  qudt:symbol "CO₂e"@en .
+
+<http://www.wikidata.org/entity/Q182098> rdfs:label "kilowatt hour"@en;
+  qudt:symbol "kWh"@en .
+
+<http://www.wikidata.org/entity/Q11570> rdfs:label "kilogram"@en;
+  qudt:symbol "kg"@en .
+
+<http://www.wikidata.org/entity/Q145> rdfs:label "United Kingdom"@en .
+
+<http://www.wikidata.org/entity/Q191118> rdfs:label "tonne"@en;
+  qudt:symbol "t"@en .
+
+<http://www.wikidata.org/entity/Q1997> rdfs:label "carbon dioxide"@en .
+
+<http://www.wikidata.org/entity/Q905750> rdfs:label "nitrous oxide"@en .
+
+<http://www.wikidata.org/entity/Q828224> rdfs:label "kilometre"@en;
+  qudt:symbol "km"@en .
+
+<http://www.wikidata.org/entity/Q37129> rdfs:label "methane"@en .
+
+<http://www.wikidata.org/entity/Q253276> rdfs:label "mile"@en;
+  qudt:symbol "mi"@en .
+
+<http://www.wikidata.org/entity/Q11582> rdfs:label "litre"@en;
+  qudt:symbol  "l"@en .
+
+<http://www.wikidata.org/entity/Q25517> rdfs:label "cubic metre"@en;
+  qudt:symbol "m³"@en .
+
+<http://www.wikidata.org/entity/Q53393868> rdfs:label "gigajoule"@en;
+  qudt:symbol "GJ"@en .
+
+<http://www.wikidata.org/entity/Q25235> rdfs:label "hour"@en;
+  qudt:symbol "h"@en .
+
+<http://www.wikidata.org/entity/Q25236> rdfs:label "watt"@en;
+  qudt:symbol "W"@en .
+
+<http://www.wikidata.org/entity/Q408> rdfs:label "Australia"@en .
+
+<http://www.wikidata.org/entity/Q31> rdfs:label "Belgium"@en .
+
+<http://www.wikidata.org/entity/Q155> rdfs:label "Brazil"@en .
+
+<http://www.wikidata.org/entity/Q16> rdfs:label "Canada"@en .
+
+<http://www.wikidata.org/entity/Q298> rdfs:label "Chile"@en .
+
+<http://www.wikidata.org/entity/Q148> rdfs:label "People's Republic of China"@en .
+
+<http://www.wikidata.org/entity/Q739> rdfs:label "Colombia"@en .
+
+<http://www.wikidata.org/entity/Q800> rdfs:label "Costa Rica"@en .
+
+<http://www.wikidata.org/entity/Q79> rdfs:label "Egypt"@en .
+
+<http://www.wikidata.org/entity/Q142> rdfs:label "France"@en .
+
+<http://www.wikidata.org/entity/Q183> rdfs:label "Germany"@en .
+
+<http://www.wikidata.org/entity/Q8646> rdfs:label "Hong Kong"@en .
+
+<http://www.wikidata.org/entity/Q668> rdfs:label "India"@en .
+
+<http://www.wikidata.org/entity/Q252> rdfs:label "Indonesia"@en .
+
+<http://www.wikidata.org/entity/Q38> rdfs:label "Italy"@en .
+
+<http://www.wikidata.org/entity/Q17> rdfs:label "Japan"@en .
+
+<http://www.wikidata.org/entity/Q810> rdfs:label "Jordan"@en .
+
+<http://www.wikidata.org/entity/Q18097> rdfs:label "Korea"@en .
+
+<http://www.wikidata.org/entity/Q833> rdfs:label "Malaysia"@en .
+
+<http://www.wikidata.org/entity/Q826> rdfs:label "Maldives"@en .
+
+<http://www.wikidata.org/entity/Q96> rdfs:label "Mexico"@en .
+
+<http://www.wikidata.org/entity/Q55> rdfs:label "Netherlands"@en .
+
+<http://www.wikidata.org/entity/Q842> rdfs:label "Oman"@en .
+
+<http://www.wikidata.org/entity/Q928> rdfs:label "Philippines"@en .
+
+<http://www.wikidata.org/entity/Q45> rdfs:label "Portugal"@en .
+
+<http://www.wikidata.org/entity/Q846> rdfs:label "Qatar"@en .
+
+<http://www.wikidata.org/entity/Q159> rdfs:label "Russia"@en .
+
+<http://www.wikidata.org/entity/Q851> rdfs:label "Saudi Arabia"@en .
+
+<http://www.wikidata.org/entity/Q334> rdfs:label "Singapore"@en .
+
+<http://www.wikidata.org/entity/Q258> rdfs:label "South Africa"@en .
+
+<http://www.wikidata.org/entity/Q29> rdfs:label "Spain"@en .
+
+<http://www.wikidata.org/entity/Q39> rdfs:label "Switzerland"@en .
+
+<http://www.wikidata.org/entity/Q869> rdfs:label "Thailand"@en .
+
+<http://www.wikidata.org/entity/Q43> rdfs:label "Turkey"@en .
+
+<http://www.wikidata.org/entity/Q878> rdfs:label "United Arab Emirates"@en .
+
+<http://www.wikidata.org/entity/Q30> rdfs:label "United States of America"@en .
+
+<http://www.wikidata.org/entity/Q881> rdfs:label "Vietnam"@en .
+
+<http://www.wikidata.org/entity/Q40> rdfs:label "Austria"@en .
+
+<http://www.wikidata.org/entity/Q219> rdfs:label "Bulgaria"@en .
+
+<http://www.wikidata.org/entity/Q865> rdfs:label "Taiwan"@en .
+
+<http://www.wikidata.org/entity/Q224> rdfs:label "Croatia"@en .
+
+<http://www.wikidata.org/entity/Q229> rdfs:label "Cyprus"@en .
+
+<http://www.wikidata.org/entity/Q213> rdfs:label "Czech Republic"@en .
+
+<http://www.wikidata.org/entity/Q35> rdfs:label "Denmark"@en .
+
+<http://www.wikidata.org/entity/Q191> rdfs:label "Estonia"@en .
+
+<http://www.wikidata.org/entity/Q33> rdfs:label "Finland"@en .
+
+<http://www.wikidata.org/entity/Q1410> rdfs:label "Gibraltar"@en .
+
+<http://www.wikidata.org/entity/Q41> rdfs:label "Greece"@en .
+
+<http://www.wikidata.org/entity/Q28> rdfs:label "Hungary"@en .
+
+<http://www.wikidata.org/entity/Q189> rdfs:label "Iceland"@en .
+
+<http://www.wikidata.org/entity/Q27> rdfs:label "Republic of Ireland"@en .
+
+<http://www.wikidata.org/entity/Q801> rdfs:label "Israel"@en .
+
+<http://www.wikidata.org/entity/Q211> rdfs:label "Latvia"@en .
+
+<http://www.wikidata.org/entity/Q37> rdfs:label "Lithuania"@en .
+
+<http://www.wikidata.org/entity/Q32> rdfs:label "Luxembourg"@en .
+
+<http://www.wikidata.org/entity/Q233> rdfs:label "Malta"@en .
+
+<http://www.wikidata.org/entity/Q664> rdfs:label "New Zealand"@en .
+
+<http://www.wikidata.org/entity/Q20> rdfs:label "Norway"@en .
+
+<http://www.wikidata.org/entity/Q843> rdfs:label "Pakistan"@en .
+
+<http://www.wikidata.org/entity/Q36> rdfs:label "Poland"@en .
+
+<http://www.wikidata.org/entity/Q218> rdfs:label "Romania"@en .
+
+<http://www.wikidata.org/entity/Q214> rdfs:label "Slovakia"@en .
+
+<http://www.wikidata.org/entity/Q215> rdfs:label "Slovenia"@en .
+
+<http://www.wikidata.org/entity/Q884> rdfs:label "South Korea"@en .
+
+<http://www.wikidata.org/entity/Q34> rdfs:label "Sweden"@en .
+
+<http://www.wikidata.org/entity/Q212> rdfs:label "Ukraine"@en .
+
+<http://www.wikidata.org/entity/Q15> rdfs:label "Africa"@en .
+
+<http://www.wikidata.org/entity/Q458> rdfs:label "European Union"@en .
+
+<http://www.wikidata.org/entity/Q12585> rdfs:label "Latin America"@en .
+
+<http://www.wikidata.org/entity/Q7204> rdfs:label "Middle East"@en .
+
+<http://www.wikidata.org/entity/Q18> rdfs:label "South America"@en .
+
+<http://www.wikidata.org/entity/Q414> rdfs:label "Argentina"@en .
+
+<http://www.wikidata.org/entity/Q712> rdfs:label "Fiji"@en .
+
+<http://www.wikidata.org/entity/Q14773> rdfs:label "Macau"@en .
+
+<http://www.wikidata.org/entity/Q804> rdfs:label "Panama"@en .
+
+<http://www.wikidata.org/entity/Q419> rdfs:label "Peru"@en .
+
+<http://www.wikidata.org/entity/Q664609> rdfs:label "Caribbean"@en .
+
+<http://www.wikidata.org/entity/Q30971> rdfs:label "French Polynesia"@en .
