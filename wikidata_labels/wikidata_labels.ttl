@@ -3,7 +3,6 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.wikidata.org/entity/Q3517751> rdfs:label "time"@en .
@@ -12,46 +11,39 @@
 
 <http://www.wikidata.org/entity/Q12725> rdfs:label "electricity"@en .
 
-<http://www.wikidata.org/entity/Q1933140> rdfs:label "carbon dioxide equivalent"@en;
-  qudt:symbol "CO₂e"@en .
-
 <http://www.wikidata.org/entity/Q182098> rdfs:label "kilowatt hour"@en;
-  qudt:symbol "kWh"@en .
+  qudt:abbreviation "kWh"@en .
 
 <http://www.wikidata.org/entity/Q11570> rdfs:label "kilogram"@en;
-  qudt:symbol "kg"@en .
+  qudt:abbreviation "kg"@en .
 
 <http://www.wikidata.org/entity/Q145> rdfs:label "United Kingdom"@en .
 
 <http://www.wikidata.org/entity/Q191118> rdfs:label "tonne"@en;
-  qudt:symbol "t"@en .
-
-<http://www.wikidata.org/entity/Q1997> rdfs:label "carbon dioxide"@en .
-
-<http://www.wikidata.org/entity/Q905750> rdfs:label "nitrous oxide"@en .
+  qudt:abbreviation "t"@en .
 
 <http://www.wikidata.org/entity/Q828224> rdfs:label "kilometre"@en;
-  qudt:symbol "km"@en .
+  qudt:abbreviation "km"@en .
 
 <http://www.wikidata.org/entity/Q37129> rdfs:label "methane"@en .
 
 <http://www.wikidata.org/entity/Q253276> rdfs:label "mile"@en;
-  qudt:symbol "mi"@en .
+  qudt:abbreviation "mi"@en .
 
 <http://www.wikidata.org/entity/Q11582> rdfs:label "litre"@en;
-  qudt:symbol  "l"@en .
+  qudt:abbreviation  "l"@en .
 
 <http://www.wikidata.org/entity/Q25517> rdfs:label "cubic metre"@en;
-  qudt:symbol "m³"@en .
+  qudt:abbreviation "m³"@en .
 
 <http://www.wikidata.org/entity/Q53393868> rdfs:label "gigajoule"@en;
-  qudt:symbol "GJ"@en .
+  qudt:abbreviation "GJ"@en .
 
 <http://www.wikidata.org/entity/Q25235> rdfs:label "hour"@en;
-  qudt:symbol "h"@en .
+  qudt:abbreviation "h"@en .
 
 <http://www.wikidata.org/entity/Q25236> rdfs:label "watt"@en;
-  qudt:symbol "W"@en .
+  qudt:abbreviation "W"@en .
 
 <http://www.wikidata.org/entity/Q408> rdfs:label "Australia"@en .
 
