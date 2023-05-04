@@ -1,0 +1,98 @@
+prefixes:
+  ecfo: "https://w3id.org/ecfo#"
+  qudt: "http://qudt.org/schema/qudt/"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  prov: "http://www.w3.org/ns/prov#"
+  time: "http://www.w3.org/2006/time#"
+  ecfo_instance: "https://w3id.org/ecfkg/i/mlco2/"
+  dc: "http://purl.org/dc/elements/1.1/"
+  geo: "http://www.opengis.net/ont/geosparql#"
+
+sources:
+  main-source: ['./data/mlcalculator_impact_v2.csv~csv']
+mappings:
+  CF:
+    sources:
+      - main-source
+
+    s: ecfo_instance:$(provider)/$(region)/cf
+    po:
+      - [a, ecfo:EmissionConversionFactor]
+      - [rdf:value, $(impact_modified),xsd:float]
+      - [ecfo:hasTag, ecfo_instance:$(provider)~iri]
+      - [ecfo:hasScope, https://w3id.org/ecfo#Scope2~iri]
+      - [ecfo:hasTag, https://www.wikidata.org/entity/Q12725~iri]
+      - [ecfo:hasApplicableLocation, ecfo_instance:$(provider)/$(region)~iri]
+      - [prov:wasDerivedFrom, $(source_curated), xsd:string]
+      - [ecfo:hasSourceUnit, http://www.wikidata.org/entity/Q182098~iri]
+      - [ecfo:hasEmissionSource, http://www.wikidata.org/entity/Q12725~iri]
+      - [ecfo:hasTargetUnit, http://www.wikidata.org/entity/Q11570~iri]
+      - [ecfo:hasEmissionTarget, http://www.wikidata.org/entity/Q1933140~iri]
+      - [ecfo:hasApplicablePeriod, ecfo_instance:applicablePeriod/$(valid_from)/$(valid_to)~iri]
+      - [dc:publisher, ecfo_instance:MLCO2ImpactCalculator~iri]
+
+  Agent:
+    sources:
+       - main-source
+    s: ecfo_instance:MLCO2ImpactCalculator
+    po:
+      - [a, prov:Organization]
+      - [rdfs:label, 'ML CO2 Impact Calculator Team', en~lang]
+      - [rdfs:seeAlso, 'https://mlco2.github.io/impact/',xsd:anyURI]
+
+  TimeStart:
+    sources:
+        - main-source
+
+    s: ecfo_instance:applicablePeriod/$(valid_from)/$(valid_to)/start
+    po:
+      - [a, time:Instant]
+      - [time:inXSDDate, $(valid_from),xsd:dateTime]
+
+  TimeEnd:
+      sources:
+          - main-source
+
+      s: ecfo_instance:applicablePeriod/$(valid_from)/$(valid_to)/end
+      po:
+       - [a, time:Instant]
+       - [time:inXSDDate, $(valid_to),xsd:dateTime ]
+
+  TemporalEntity:
+    sources:
+        - main-source
+
+    s: ecfo_instance:applicablePeriod/$(valid_from)/$(valid_to)
+    po:
+     - [a, time:TemporalEntity]
+     - [time:hasBeginning, ecfo_instance:applicablePeriod/$(valid_from)/$(valid_to)/start~iri]
+     - [time:hasEnd, ecfo_instance:applicablePeriod/$(valid_from)/$(valid_to)/end~iri]
+
+  ApplicableRegion:
+    sources:
+        - main-source
+
+    s: ecfo_instance:$(provider)/$(region)
+    po:
+      - [a, prov:Location]
+      - [a, geo:SpatialObject]
+      - [rdfs:label, $(region), en~lang]
+
+
+  Country:
+    sources:
+       - main-source
+
+    s: $(country_wikidata)
+    po:
+      - [a, prov:Location]
+      - [a, geo:SpatialObject]
+      - [geo:ehContains, ecfo_instance:$(provider)/$(region)~iri]
+
+  L1:
+    sources:
+        - main-source
+    s: ecfo_instance:$(provider)
+    po:
+        - [a , skos:Concept]
+        - [rdfs:label, $(providerName), en~lang]

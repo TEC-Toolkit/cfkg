@@ -1,0 +1,1637 @@
+@prefix ns1: <https://w3id.org/ecfo#> .
+@prefix ns2: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns3: <http://www.w3.org/ns/prov#> .
+@prefix ns4: <http://purl.org/dc/elements/1.1/> .
+@prefix ns5: <http://www.w3.org/2006/time#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q142> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/eu-west-3>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/francecentral>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/francesouth>,
+        <https://w3id.org/ecfkg/i/mlco2/ovh/gra>,
+        <https://w3id.org/ecfkg/i/mlco2/scaleway/Paris> .
+
+<http://www.wikidata.org/entity/Q145> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/eu-west-2>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/uksouth>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/ukwest>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west2> .
+
+<http://www.wikidata.org/entity/Q148> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ap-east-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/cn-north-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/cn-northwest-1>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/eastasia>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/asia-east2> .
+
+<http://www.wikidata.org/entity/Q155> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/sa-east-1>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/brazilsouth>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/southamerica-east1> .
+
+<http://www.wikidata.org/entity/Q16> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ca-central-1>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/canadacentral>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/canadaeast>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/northamerica-northeast1>,
+        <https://w3id.org/ecfkg/i/mlco2/ovh/bhs> .
+
+<http://www.wikidata.org/entity/Q17> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-3>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/japaneast>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/japanwest>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast1>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast2> .
+
+<http://www.wikidata.org/entity/Q183> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/eu-central-1>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west3> .
+
+<http://www.wikidata.org/entity/Q258> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/azure/southafricanorth>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/southafricawest> .
+
+<http://www.wikidata.org/entity/Q27> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/eu-west-1>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/northeurope> .
+
+<http://www.wikidata.org/entity/Q30> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/us-east-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/us-east-2>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/us-gov-east-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/us-gov-west-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/us-west-1>,
+        <https://w3id.org/ecfkg/i/mlco2/aws/us-west-2>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/centralus>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/eastus>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/eastus2>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/northcentralus>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/southcentralus>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/westcentralus>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/westus>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/westus2>,
+        <https://w3id.org/ecfkg/i/mlco2/coreweave/LAS1>,
+        <https://w3id.org/ecfkg/i/mlco2/coreweave/LGA1>,
+        <https://w3id.org/ecfkg/i/mlco2/coreweave/ORD1>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/us-central1>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/us-east1>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/us-east4>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/us-west1>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/us-west2>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/us-west3> .
+
+<http://www.wikidata.org/entity/Q31> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west1> .
+
+<http://www.wikidata.org/entity/Q33> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/gcp/europe-north1> .
+
+<http://www.wikidata.org/entity/Q334> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-1>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/southeastasia>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/asia-southeast1> .
+
+<http://www.wikidata.org/entity/Q34> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/eu-north-1> .
+
+<http://www.wikidata.org/entity/Q39> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west6> .
+
+<http://www.wikidata.org/entity/Q408> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-2>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/australiacentral>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/australiacentral2>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/australiaeast>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/australiasoutheast>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/australia-southeast1> .
+
+<http://www.wikidata.org/entity/Q55> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/azure/westeurope>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west4> .
+
+<http://www.wikidata.org/entity/Q668> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ap-south-1>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/centralindia>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/southindia>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/westindia>,
+        <https://w3id.org/ecfkg/i/mlco2/gcp/asia-south1> .
+
+<http://www.wikidata.org/entity/Q865> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/gcp/asia-east1> .
+
+<http://www.wikidata.org/entity/Q884> a ns2:SpatialObject,
+        ns3:Location ;
+    ns2:ehContains <https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-2>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/koreacentral>,
+        <https://w3id.org/ecfkg/i/mlco2/azure/koreasouth> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-east-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.702"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S095965261731627X" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-east-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.516"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.517"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-2> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-3/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.516"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-3> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-south-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.92"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-south-1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.419"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.ema.gov.sg/cmsmedia/Publications_and_Statistics/Publications/SES18/Publication_Singapore_Energy_Statistics_2018.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.802"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.cleanenergyregulator.gov.au/NGER/National%20greenhouse%20and%20energy%20reporting%20data/electricity-sector-emissions-and-generation-data/electricity-sector-emissions-and-generation-data-2016-17" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-2> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ca-central-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.02"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1364032120307206" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/ca-central-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/cn-north-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.68"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/cn-north-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/cn-northwest-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.68"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/cn-northwest-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-central-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.615"^^xsd:float ;
+    ns3:wasDerivedFrom "www.electricitymap.org" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/eu-central-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-north-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.047"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/eu-north-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-west-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.617"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/eu-west-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-west-2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.623"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/eu-west-2> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-west-3/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.105"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/eu-west-3> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/sa-east-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.205"^^xsd:float ;
+    ns3:wasDerivedFrom "https://pdfs.semanticscholar.org/bd2a/69da81529a0f8dd16573dfd38e9d7468637e.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/sa-east-1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-east-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.3678"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/us-east-1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-east-2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.5682"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/us-east-2> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-gov-east-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.5682"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/us-gov-east-1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-gov-west-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2976"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/us-gov-west-1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-west-1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2406"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/us-west-1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-west-2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2976"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/aws/us-west-2> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/aws>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiacentral/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.9"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/australiacentral> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiacentral2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.9"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/australiacentral2> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiaeast/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.802"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.cleanenergyregulator.gov.au/NGER/National%20greenhouse%20and%20energy%20reporting%20data/electricity-sector-emissions-and-generation-data/electricity-sector-emissions-and-generation-data-2016-17" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/australiaeast> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiasoutheast/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.805"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.cleanenergyregulator.gov.au/NGER/National%20greenhouse%20and%20energy%20reporting%20data/electricity-sector-emissions-and-generation-data/electricity-sector-emissions-and-generation-data-2016-17" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/australiasoutheast> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/brazilsouth/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.205"^^xsd:float ;
+    ns3:wasDerivedFrom "https://pdfs.semanticscholar.org/bd2a/69da81529a0f8dd16573dfd38e9d7468637e.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/brazilsouth> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/canadacentral/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.0693"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/canadacentral> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/canadaeast/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.02"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1364032120307206" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/canadaeast> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/centralindia/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.92"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/centralindia> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/centralus/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.7366"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/centralus> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/eastasia/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.702"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S095965261731627X" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/eastasia> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/eastus/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.3678"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/eastus> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/eastus2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.3678"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/eastus2> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/francecentral/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.105"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/francecentral> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/francesouth/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.105"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/francesouth> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/japaneast/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.516"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/japaneast> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/japanwest/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.516"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/japanwest> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/koreacentral/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.517"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/koreacentral> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/koreasouth/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.517"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/koreasouth> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/northcentralus/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.5682"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/northcentralus> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/northeurope/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.617"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/northeurope> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southafricanorth/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "1.009"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/southafricanorth> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southafricawest/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "1.009"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/southafricawest> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southcentralus/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.4604"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/southcentralus> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southeastasia/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.419"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.ema.gov.sg/cmsmedia/Publications_and_Statistics/Publications/SES18/Publication_Singapore_Energy_Statistics_2018.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/southeastasia> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southindia/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.92"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/southindia> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/uksouth/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.623"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/uksouth> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/ukwest/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.623"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/ukwest> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westcentralus/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2976"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/westcentralus> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westeurope/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.569"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/westeurope> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westindia/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.92"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/westindia> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westus/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2406"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/westus> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westus2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2976"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/azure/westus2> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/azure>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave/LAS1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.47458"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/coreweave/LAS1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/coreweave>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave/LGA1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.28275"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/coreweave/LGA1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/coreweave>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave/ORD1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.4245"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/coreweave/ORD1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/coreweave>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-east1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.557"^^xsd:float ;
+    ns3:wasDerivedFrom "www.electricitymap.org" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/asia-east1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-east2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.702"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S095965261731627X" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/asia-east2> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.516"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.516"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast2> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-south1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.92"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/asia-south1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-southeast1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.419"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.ema.gov.sg/cmsmedia/Publications_and_Statistics/Publications/SES18/Publication_Singapore_Energy_Statistics_2018.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/asia-southeast1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/australia-southeast1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.802"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.cleanenergyregulator.gov.au/NGER/National%20greenhouse%20and%20energy%20reporting%20data/electricity-sector-emissions-and-generation-data/electricity-sector-emissions-and-generation-data-2016-17" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/australia-southeast1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-north1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.211"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-north1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.267"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.623"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west2> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west3/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.615"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west3> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west4/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.569"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1361920916307933" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west4> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west6/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.016"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west6> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/northamerica-northeast1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.0345"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1364032120307206" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/northamerica-northeast1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/southamerica-east1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.205"^^xsd:float ;
+    ns3:wasDerivedFrom "https://pdfs.semanticscholar.org/bd2a/69da81529a0f8dd16573dfd38e9d7468637e.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/southamerica-east1> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-central1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.5663"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/us-central1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-east1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.3678"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/us-east1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-east4/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.3678"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/us-east4> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-west1/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2976"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/us-west1> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-west2/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2406"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/us-west2> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-west3/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.2721"^^xsd:float ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/gcp/us-west3> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/gcp>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/ovh/bhs/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.02"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.sciencedirect.com/science/article/pii/S1364032120307206" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/ovh/bhs> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/ovh>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/ovh/gra/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.105"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/ovh/gra> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/ovh>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/scaleway/Paris/cf> a ns1:EmissionConversionFactor ;
+    ns4:publisher <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> ;
+    rdf:value "0.105"^^xsd:float ;
+    ns3:wasDerivedFrom "https://www.carbonfootprint.com/docs/2018_8_electricity_factors_august_2018_-_online_sources.pdf" ;
+    ns1:hasApplicableLocation <https://w3id.org/ecfkg/i/mlco2/scaleway/Paris> ;
+    ns1:hasApplicablePeriod <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> ;
+    ns1:hasEmissionSource <http://www.wikidata.org/entity/Q12725> ;
+    ns1:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+    ns1:hasScope ns1:Scope2 ;
+    ns1:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+    ns1:hasTag <https://w3id.org/ecfkg/i/mlco2/scaleway>,
+        <https://www.wikidata.org/entity/Q12725> ;
+    ns1:hasTargetUnit <http://www.wikidata.org/entity/Q11570> .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2015-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2002-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2013-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2013-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2016-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2016-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2017-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2016-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2017-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2017-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2018-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2018-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2019-12-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2019-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59/end> a ns5:Instant ;
+    ns5:inXSDDate "2022-10-31T23:59:59"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59/start> a ns5:Instant ;
+    ns5:inXSDDate "2021-10-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/mlco2/scaleway> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    rdfs:label "Scaleway"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2019-01-01T00%3A00%3A00/2019-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-east-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-east-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-northeast-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-northeast-2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-northeast-3> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-northeast-3"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-south-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-south-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-southeast-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ap-southeast-2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ap-southeast-2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/ca-central-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ca-central-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/cn-north-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "cn-north-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/cn-northwest-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "cn-northwest-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-central-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eu-central-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-north-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eu-north-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-west-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eu-west-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-west-2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eu-west-2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/eu-west-3> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eu-west-3"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/sa-east-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "sa-east-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-east-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-east-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-east-2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-east-2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-gov-east-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-gov-east-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-gov-west-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-gov-west-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-west-1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-west-1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws/us-west-2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-west-2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiacentral> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "australiacentral"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiacentral2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "australiacentral2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiaeast> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "australiaeast"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/australiasoutheast> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "australiasoutheast"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/brazilsouth> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "brazilsouth"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/canadacentral> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "canadacentral"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/canadaeast> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "canadaeast"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/centralindia> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "centralindia"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/centralus> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "centralus"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/eastasia> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eastasia"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/eastus> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eastus"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/eastus2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "eastus2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/francecentral> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "francecentral"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/francesouth> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "francesouth"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/japaneast> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "japaneast"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/japanwest> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "japanwest"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/koreacentral> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "koreacentral"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/koreasouth> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "koreasouth"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/northcentralus> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "northcentralus"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/northeurope> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "northeurope"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southafricanorth> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "southafricanorth"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southafricawest> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "southafricawest"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southcentralus> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "southcentralus"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southeastasia> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "southeastasia"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/southindia> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "southindia"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/uksouth> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "uksouth"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/ukwest> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ukwest"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westcentralus> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "westcentralus"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westeurope> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "westeurope"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westindia> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "westindia"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westus> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "westus"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure/westus2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "westus2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave/LAS1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "LAS1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave/LGA1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "LGA1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave/ORD1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "ORD1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-east1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "asia-east1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-east2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "asia-east2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "asia-northeast1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-northeast2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "asia-northeast2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-south1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "asia-south1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/asia-southeast1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "asia-southeast1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/australia-southeast1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "australia-southeast1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-north1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "europe-north1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "europe-west1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "europe-west2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west3> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "europe-west3"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west4> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "europe-west4"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/europe-west6> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "europe-west6"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/northamerica-northeast1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "northamerica-northeast1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/southamerica-east1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "southamerica-east1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-central1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-central1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-east1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-east1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-east4> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-east4"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-west1> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-west1"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-west2> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-west2"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp/us-west3> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "us-west3"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/ovh> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    rdfs:label "OVHCloud"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/ovh/bhs> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "bhs"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/ovh/gra> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "gra"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/scaleway/Paris> a ns2:SpatialObject,
+        ns3:Location ;
+    rdfs:label "Paris"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2002-01-01T00%3A00%3A00/2015-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2016-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2021-10-01T00%3A00%3A00/2022-10-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/coreweave> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    rdfs:label "CoreWeave"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2016-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2017-01-01T00%3A00%3A00/2017-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2013-01-01T00%3A00%3A00/2013-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59> a ns5:TemporalEntity ;
+    ns5:hasBeginning <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59/start> ;
+    ns5:hasEnd <https://w3id.org/ecfkg/i/mlco2/applicablePeriod/2018-01-01T00%3A00%3A00/2018-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/mlco2/gcp> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    rdfs:label "Google Cloud Platform"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/aws> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    rdfs:label "Amazon Web Services"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/azure> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    rdfs:label "Azure"@en .
+
