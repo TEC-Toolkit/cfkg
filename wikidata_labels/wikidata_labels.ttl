@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
 
 <http://www.wikidata.org/entity/Q3517751> rdfs:label "time"@en .
 
@@ -201,18 +202,17 @@
 
 <http://www.wikidata.org/entity/Q30971> rdfs:label "French Polynesia"@en .
 
-<http://www.wikidata.org/entity/Q1933140> a ns1:ChemicalCompound ;
-    rdfs:label "carbon dioxide equivalent"@en ;
+<http://www.wikidata.org/entity/Q1933140> rdfs:label "carbon dioxide equivalent"@en ;
     ns5:molecularFormula "CO2e"@en .
 
 <http://www.wikidata.org/entity/Q37129> a ns1:ChemicalCompound ;
     rdfs:label "methane"@en ;
-    ns5:molecularFormula "CH4"@en .
+    schema:molecularFormula "CH4"@en .
 
 <http://www.wikidata.org/entity/Q1997> a ns1:ChemicalCompound ;
     rdfs:label "carbon dioxide"@en ;
-    ns5:molecularFormula "CO2"@en .
+    schema:molecularFormula "CO2"@en .
 
 <http://www.wikidata.org/entity/Q905750> a ns1:ChemicalCompound ;
     rdfs:label "nitrous oxide"@en ;
-    ns5:molecularFormula "N2O"@en .
+    schema:molecularFormula "N2O"@en .
