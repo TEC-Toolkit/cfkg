@@ -200,3 +200,19 @@
 <http://www.wikidata.org/entity/Q664609> rdfs:label "Caribbean"@en .
 
 <http://www.wikidata.org/entity/Q30971> rdfs:label "French Polynesia"@en .
+
+<http://www.wikidata.org/entity/Q1933140> a ns1:ChemicalCompound ;
+    rdfs:label "carbon dioxide equivalent"@en ;
+    ns5:molecularFormula "CO2e"@en .
+
+<http://www.wikidata.org/entity/Q37129> a ns1:ChemicalCompound ;
+    rdfs:label "methane"@en ;
+    ns5:molecularFormula "CH4"@en .
+
+<http://www.wikidata.org/entity/Q1997> a ns1:ChemicalCompound ;
+    rdfs:label "carbon dioxide"@en ;
+    ns5:molecularFormula "CO2"@en .
+
+<http://www.wikidata.org/entity/Q905750> a ns1:ChemicalCompound ;
+    rdfs:label "nitrous oxide"@en ;
+    ns5:molecularFormula "N2O"@en .

@@ -1,0 +1,15 @@
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#>
+
+<https://w3id.org/ecfkg/i/Organization/BEIS> a prov:Organization;
+    rdfs:seeAlso "https://www.gov.uk/government/organisations/department-for-business-energy-and-industrial-strategy/about"^^xsd:anyURI;
+    rdfs:label "Department for Business Energy and Industrial Strategy (BEIS)"@en .
+
+<https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> a prov:Organization;
+   rdfs:label "ML CO2 Impact Calculator Team"@en;
+   rdfs:seeAlso "https://mlco2.github.io/impact/"^^xsd:anyURI
