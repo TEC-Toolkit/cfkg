@@ -203,7 +203,7 @@
 <http://www.wikidata.org/entity/Q30971> rdfs:label "French Polynesia"@en .
 
 <http://www.wikidata.org/entity/Q1933140> rdfs:label "carbon dioxide equivalent"@en ;
-    ns5:molecularFormula "CO2e"@en .
+    schema:molecularFormula "CO2e"@en .
 
 <http://www.wikidata.org/entity/Q37129> rdfs:label "methane"@en ;
     schema:molecularFormula "CH4"@en .
