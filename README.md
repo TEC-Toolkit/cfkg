@@ -7,4 +7,7 @@ Work in progress:
 - EPA
 
 
-All data is loaded in [https://cf.linkeddata.es/sparql](https://cf.linkeddata.es/sparql). The default graph is [https://cf.linkeddata.es/ecfkg/data](https://cf.linkeddata.es/ecfkg/data)
+All data is loaded in [https://sparql.cf.linkeddata.es/](https://sparql.cf.linkeddata.es/), in the `cf` dataset. To perform a query, just URL encode it:
+```
+curl https://sparql.cf.linkeddata.es/cf -X POST --data 'query=YOUR_QUERY_URL_ENCODED' -H 'Accept: application/sparql-results+json,*/*;q=0.9'
+```
