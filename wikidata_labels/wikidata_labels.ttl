@@ -205,14 +205,11 @@
 <http://www.wikidata.org/entity/Q1933140> rdfs:label "carbon dioxide equivalent"@en ;
     ns5:molecularFormula "CO2e"@en .
 
-<http://www.wikidata.org/entity/Q37129> a ns1:ChemicalCompound ;
-    rdfs:label "methane"@en ;
+<http://www.wikidata.org/entity/Q37129> rdfs:label "methane"@en ;
     schema:molecularFormula "CH4"@en .
 
-<http://www.wikidata.org/entity/Q1997> a ns1:ChemicalCompound ;
-    rdfs:label "carbon dioxide"@en ;
+<http://www.wikidata.org/entity/Q1997> rdfs:label "carbon dioxide"@en ;
     schema:molecularFormula "CO2"@en .
 
-<http://www.wikidata.org/entity/Q905750> a ns1:ChemicalCompound ;
-    rdfs:label "nitrous oxide"@en ;
+<http://www.wikidata.org/entity/Q905750> rdfs:label "nitrous oxide"@en ;
     schema:molecularFormula "N2O"@en .
