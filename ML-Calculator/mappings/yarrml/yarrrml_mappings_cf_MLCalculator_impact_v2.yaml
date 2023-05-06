@@ -4,7 +4,7 @@ prefixes:
   skos: "http://www.w3.org/2004/02/skos/core#"
   prov: "http://www.w3.org/ns/prov#"
   time: "http://www.w3.org/2006/time#"
-  ecfo_instance: "https://w3id.org/ecfkg/i/mlco2/"
+  ecfo_instance: "https://w3id.org/ecfkg/i/"
   dc: "http://purl.org/dc/elements/1.1/"
   geo: "http://www.opengis.net/ont/geosparql#"
 
@@ -15,7 +15,7 @@ mappings:
     sources:
       - main-source
 
-    s: ecfo_instance:$(provider)/$(region)/cf
+    s: ecfo_instance:$(region)/mlco2/cf_$(provider)
     po:
       - [a, ecfo:EmissionConversionFactor]
       - [rdf:value, $(impact_modified),xsd:float]
