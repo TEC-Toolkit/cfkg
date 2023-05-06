@@ -12,4 +12,16 @@
 
 <https://w3id.org/ecfkg/i/mlco2/MLCO2ImpactCalculator> a prov:Organization;
    rdfs:label "ML CO2 Impact Calculator Team"@en;
-   rdfs:seeAlso "https://mlco2.github.io/impact/"^^xsd:anyURI
+   rdfs:seeAlso "https://mlco2.github.io/impact/"^^xsd:anyURI .
+
+<https://w3id.org/ecfo#Scope1> rdf:type <https://w3id.org/ecfo#Scope> ;
+       <http://purl.org/dc/elements/1.1/description> "Scope 1 (direct emissions) emissions are those from activities owned or controlled by your organisation. Examples of Scope 1 emissions include emissions from combustion in owned or controlled boilers, furnaces and vehicles; and emissions from chemical production in owned or controlled process equipment." ;
+       rdfs:label "scope 1" .
+
+<https://w3id.org/ecfo#Scope2> rdf:type <https://w3id.org/ecfo#Scope> ;
+      <http://purl.org/dc/elements/1.1/description> "Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisation’s energy use, but occur at sources you do not own or control." ;
+      rdfs:label "scope 2" .
+
+<https://w3id.org/ecfo#Scope3> rdf:type <https://w3id.org/ecfo#Scope> ;
+       <http://purl.org/dc/elements/1.1/description> "Scope 3 (other indirect) emissions are a consequence of your actions that occur at sources you do not own or control and are not classed as Scope 2 emissions. Examples of Scope 3 emissions are business travel by means not owned or controlled by your organisation, waste disposal, materials or fuels your organisation purchases. Deciding if emissions from a vehicle, office or factory that you use are Scope 1 or Scope 3 may depend on how you define your operational boundaries. Scope 3 emissions can be from activities that are upstream or downstream of your organisation. More information on Scope 3 and other aspects of reporting can be found in the Greenhouse Gas Protocol Corporate Standard." ;
+       rdfs:label "scope 3" .
