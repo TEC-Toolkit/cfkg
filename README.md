@@ -13,7 +13,34 @@ Work in progress:
 - EPA
 
 
-All data is loaded in [https://sparql.cf.linkeddata.es/](https://sparql.cf.linkeddata.es/), in the `cf` dataset. To perform a query, just URL encode it:
+## SPARQL endpoint
+
+All data is loaded in [https://sparql.cf.linkeddata.es/cf](https://sparql.cf.linkeddata.es/cf), in the `cf` dataset. To perform a query, just URL encode the query:
 ```
 curl https://sparql.cf.linkeddata.es/cf -X POST --data 'query=YOUR_QUERY_URL_ENCODED' -H 'Accept: application/sparql-results+json,*/*;q=0.9'
 ```
+
+For example, the following query retrieves the conversion factors that involve "Butane" (and their corresponding basic metadata)
+
+Sparql: 
+```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select  ?cf ?source ?context ?target ?scope where{
+    ?cf ecfo:hasTag/rdfs:label "Butane"@en.
+    ?cf ecfo:hasEmissionTarget/rdfs:label ?target.
+    ?cf ecfo:hasEmissionSource/rdfs:label ?source.
+    ?cf ecfo:hasAdditionalContext ?context.
+    ?cf ecfo:hasScope ?scope.
+}
+```
+Corresponding curl command:
+```
+curl https://sparql.cf.linkeddata.es/cf -X POST --data 'query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+ecfo%3A+%3Chttps%3A%2F%2Fw3id.org%2Fecfo%23%3E%0APREFIX+time%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2Ftime%23%3E%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0Aselect++%3Fcf+%3Fsource+%3Fcontext+%3Ftarget+%3Fscope+where%7B%0A++++%3Fcf+ecfo%3AhasTag%2Frdfs%3Alabel+%22Butane%22%40en.%0A++++%3Fcf+ecfo%3AhasEmissionTarget%2Frdfs%3Alabel+%3Ftarget.%0A++++%3Fcf+ecfo%3AhasEmissionSource%2Frdfs%3Alabel+%3Fsource.%0A++++%3Fcf+ecfo%3AhasAdditionalContext+%3Fcontext.%0A++++%3Fcf+ecfo%3AhasScope+%3Fscope.%0A%7D' -H 'Accept: application/sparql-results+json,*/*;q=0.9'
+```
+
+We are currently in the process of setting a derreferenceable SPARQL interface to perform queries live, which will be available at: https://query.cf.linkeddata.es/
