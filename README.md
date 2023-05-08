@@ -2,6 +2,12 @@
 This repository contains the data cleaning steps and mappings of the conversion factor knowledge graph. At the moment, public data includes:
 
 - BEIS-UK, from years 2016-2022
+    - Data is licensed under an [Open Governemnt license](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+    - Each data source used is linked in each conversion factor in the KG
+
+- Machine Learning impact calculator, from years 2002-2018
+    - Data is licensed under a [MIT license](https://github.com/mlco2/impact/blob/master/LICENSE)
+    - Each data source used is linked in each conversion factor in the KG
 
 Work in progress:
 - EPA
