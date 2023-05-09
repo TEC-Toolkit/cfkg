@@ -1,4 +1,6 @@
 # Conversion factor Knowledge Graph
+[![DOI](https://zenodo.org/badge/566371476.svg)](https://zenodo.org/badge/latestdoi/566371476)
+
 This repository contains the data cleaning steps and mappings of the conversion factor knowledge graph. At the moment, public data includes:
 
 - BEIS-UK, from years 2016-2022
@@ -44,3 +46,7 @@ curl https://sparql.cf.linkeddata.es/cf -X POST --data 'query=PREFIX+rdf%3A+%3Ch
 ```
 
 We are currently in the process of setting a derreferenceable SPARQL interface to perform queries live, which will be available at: https://query.cf.linkeddata.es/
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to this repository. 
