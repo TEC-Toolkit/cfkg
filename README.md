@@ -14,6 +14,11 @@ This repository contains the data cleaning steps and mappings of the conversion 
 Work in progress:
 - EPA
 
+## Query interface
+A derreferenceable linked data browser is available at: [https://query.cf.linkeddata.es/query](https://query.cf.linkeddata.es/query), based on https://github.com/TEC-Toolkit/rdf_explorer.
+
+To see information about a conversion factor, just click on its URL, e.g., [https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1](https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1). 
+
 
 ## SPARQL endpoint
 
@@ -44,8 +49,6 @@ Corresponding curl command:
 ```
 curl https://sparql.cf.linkeddata.es/cf -X POST --data 'query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+ecfo%3A+%3Chttps%3A%2F%2Fw3id.org%2Fecfo%23%3E%0APREFIX+time%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2Ftime%23%3E%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0Aselect++%3Fcf+%3Fsource+%3Fcontext+%3Ftarget+%3Fscope+where%7B%0A++++%3Fcf+ecfo%3AhasTag%2Frdfs%3Alabel+%22Butane%22%40en.%0A++++%3Fcf+ecfo%3AhasEmissionTarget%2Frdfs%3Alabel+%3Ftarget.%0A++++%3Fcf+ecfo%3AhasEmissionSource%2Frdfs%3Alabel+%3Fsource.%0A++++%3Fcf+ecfo%3AhasAdditionalContext+%3Fcontext.%0A++++%3Fcf+ecfo%3AhasScope+%3Fscope.%0A%7D' -H 'Accept: application/sparql-results+json,*/*;q=0.9'
 ```
-
-We are currently in the process of setting a derreferenceable SPARQL interface to perform queries live, which will be available at: https://query.cf.linkeddata.es/ (based on https://github.com/TEC-Toolkit/rdf_explorer)
 
 ## Contributing
 
