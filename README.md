@@ -50,6 +50,9 @@ Corresponding curl command:
 curl https://sparql.cf.linkeddata.es/cf -X POST --data 'query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+ecfo%3A+%3Chttps%3A%2F%2Fw3id.org%2Fecfo%23%3E%0APREFIX+time%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2Ftime%23%3E%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0Aselect++%3Fcf+%3Fsource+%3Fcontext+%3Ftarget+%3Fscope+where%7B%0A++++%3Fcf+ecfo%3AhasTag%2Frdfs%3Alabel+%22Butane%22%40en.%0A++++%3Fcf+ecfo%3AhasEmissionTarget%2Frdfs%3Alabel+%3Ftarget.%0A++++%3Fcf+ecfo%3AhasEmissionSource%2Frdfs%3Alabel+%3Fsource.%0A++++%3Fcf+ecfo%3AhasAdditionalContext+%3Fcontext.%0A++++%3Fcf+ecfo%3AhasScope+%3Fscope.%0A%7D' -H 'Accept: application/sparql-results+json,*/*;q=0.9'
 ```
 
+## Tutorial
+Have a look at [our tutorial](tutorial/Using_CFKG_Evolution_of_Conversion_Factors_through_the_years.ipynb), showing how to plot the evolution of a conversion factor through the years, together with the corresponding SPARQL queries needed to adapt it to your own.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to this repository. 
