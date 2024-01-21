@@ -1,0 +1,35 @@
+1. Remove the top row Category and "END" in the last row
+2. Remove space in colum "Scope" so the column values look like this Scope 1 -> Scope1
+3. Remove all rows where GHG Conversion Factor YYYY column value is missing
+4. Remove all rows where GHG Conversion Factor YYYY column value is < 1
+5. Remove all rows where GHG column value is is other than kg CO2e, kg CH4, kg CO2, kg N2O and remove the "per unit" string from the GHG/Unit column values
+6. Add timestamp columns valid_from and valid_to
+7. Ad id column
+8. Remove the end row
+9. Format GHG conversion factor column as number with 5 decimal spaces (some entries are in format 21,453.34 which causes problems with the conversion so need to get rid of the comma)
+
+When changing UoM to kilo watt hours the note Gross CV and Net CV needs to be moved to Column Text  
+
+Additional data transformation steps to align to Wikidata:
+- Separate GHG into GHG and emission_target by space
+- Add column emission_source = =SUBSTITUTE(IF(ISBLANK(F2),D2&"_"&E2,D2&"_"&E2&"("&F2&")")," ","_")
+  - value.replace(",","").replace(":","").replace("-","") (open refine)
+- Region: create a new column region with the regions.
+- After reconciling units, do =IF(ISBLANK(J2),"https://w3id.org/ecfo/i/unit/"&SUBSTITUTE(I2;" ";"_"),J2) for obtaining the new units
+- renamed uom (simple) to "uom simple"
+- there is a special region, not in wikidata: https://w3id.org/ecfo/i/location/non_oecd_and_Eurasia
+
+
+UPDATE mappings
+
+1. Change the column look up name Conversion Factor XXXX
+2. Update wasDerivedFrom link
+3. Update main-source
+3. Update ecfo_instance prefix
+
+
+Notes
+
+Years that use Lookup column as a label for the conversion factor
+
+2021, 2020, 2019, 2018
