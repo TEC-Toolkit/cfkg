@@ -36,7 +36,7 @@ Each resource should have the following structure:
 
 [Details about the region covered by the data available in this data source]
 
-## Examples [optional]
+## Additional information [optional]
 
 [Optional additional information and examples about this resource]
 
