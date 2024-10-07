@@ -7,6 +7,7 @@ prefixes:
   schema: "https://schema.org/"
   ecfkg: "https://w3id.org/ecfkg/i/UK/BEIS/2021/"
   dc: "http://purl.org/dc/elements/1.1/"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
 sources:
   main-source: ['./data/conversion_factors_2021_modified_v2.csv~csv']
@@ -21,7 +22,7 @@ mappings:
       - [ecfo:hasAdditionalContext, $(Column Text), en~lang]
       - [rdfs:label, $(Lookup), en~lang]
       - [ecfo:hasScope, https://w3id.org/ecfo#$(Scope)~iri]
-      - [rdf:value, $(GHG Conversion Factor 2021),xsd:float]
+      - [rdf:value, $(GHG Conversion Factor 2021), xsd:float]
       - [ecfo:hasTag, https://w3id.org/ecfkg/i/$(Level 1)~iri]
       - [ecfo:hasTag, https://w3id.org/ecfkg/i/$(Level 2)~iri]
       - [ecfo:hasTag, https://w3id.org/ecfkg/i/$(Level 3)~iri]

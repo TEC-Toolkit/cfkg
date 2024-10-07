@@ -7,6 +7,7 @@ prefixes:
   schema: "https://schema.org/"
   ecfo_instance: "https://w3id.org/ecfkg/i/UK/BEIS/2017/"
   dc: "http://purl.org/dc/elements/1.1/"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
 sources:
   main-source: ['./data/conversion_factors_2017_modified_v2.csv~csv']
