@@ -15,7 +15,6 @@ authors:
   - family-names: Naja
     given-names: Iman
     orcid: 'https://orcid.org/0000-0001-6634-3266'
-url: 'https://w3id.org/peco'
 version: 1.0.0
 date-released: '2023-05-09'
 doi: 10.5281/zenodo.7916096 
