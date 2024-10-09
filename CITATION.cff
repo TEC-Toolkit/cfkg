@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: Conversion factor Knowledge Graph
+message: 'If you use this resource, please cite it as below.'
+type: software
+authors:
+  - family-names: Markovic
+    given-names: Milan
+    orcid: 'https://orcid.org/0000-0002-5477-287X'
+  - family-names: Garijo
+    given-names: Daniel
+    orcid: 'https://orcid.org/0000-0003-0454-7145'
+  - family-names: Germano
+    given-names: Stefano
+    orcid: 'https://orcid.org/0000-0001-6993-0618'
+  - family-names: Naja
+    given-names: Iman
+    orcid: 'https://orcid.org/0000-0001-6634-3266'
+url: 'https://w3id.org/peco'
+version: 1.0.0
+date-released: '2023-05-09'
+doi: 10.5281/zenodo.7916096 
+preferred-citation:
+  authors:
+    - family-names: Markovic
+      given-names: Milan
+      orcid: 'https://orcid.org/0000-0002-5477-287X'
+    - family-names: Garijo
+      given-names: Daniel
+      orcid: 'https://orcid.org/0000-0003-0454-7145'
+    - family-names: Germano
+      given-names: Stefano
+      orcid: 'https://orcid.org/0000-0001-6993-0618'
+    - family-names: Naja
+      given-names: Iman
+      orcid: 'https://orcid.org/0000-0001-6634-3266'
+  title: "TEC: Transparent Emissions Calculation Toolkit"
+  type: article
+  year: 2023
+  doi: 10.1007/978-3-031-47243-5_5
