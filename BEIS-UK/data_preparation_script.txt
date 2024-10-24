@@ -1,7 +1,7 @@
 1. Remove the top row Category
 2. Remove space in colum "Scope" so the column values look like this Scope 1 -> Scope1
 3. Remove all rows where GHG Conversion Factor YYYY column value is missing
-4. Remove all rows where GHG Conversion Factor YYYY column value is < 1
+4. Remove all rows where GHG Conversion Factor YYYY column value is the string "< 1"
 5. Remove all rows where GHG column value is is other than kg CO2e, kg CH4, kg CO2, kg N2O
 6. Add timestamp columns valid_from and valid_to
 7. Ad id column
