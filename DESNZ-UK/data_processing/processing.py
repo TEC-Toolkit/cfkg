@@ -196,6 +196,6 @@ if 'id' in df_final.columns and df_final['id'].isnull().all():
 df_final = df_final.drop(columns=['emission_target_formula_aux'])
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Guardar en Excel
-ruta_final = os.path.join(script_dir, f"../data/Conversion_Factor_{year_dataset}.xlsx")
-df_final.to_excel(ruta_final, index=False)
+ruta_final = os.path.join(script_dir, f"../data/v3/Conversion_Factor_{year_dataset}.csv")
+df_final.to_csv(ruta_final, index=False)
 print("lineas finales", df_final.shape[0])

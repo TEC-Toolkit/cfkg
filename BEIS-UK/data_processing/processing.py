@@ -1,4 +1,3 @@
-import glob
 import pandas as pd
 from datetime import datetime
 import os
@@ -59,7 +58,7 @@ def id_gwp(row, year_dataset, valor):
 
 # Ruta al directorio de los archivos Excel
 script_dir = os.path.dirname(os.path.abspath(__file__))
-ruta = os.path.join(script_dir, "../data_raw/2016_Flat_format_file_v01-01.xlsx")
+ruta = os.path.join(script_dir, "../data_raw/ghg-conversion-factors-2022-flat-format.xlsx")
 # Leer el archivo Excel
 df_raw = pd.read_excel(ruta, sheet_name='Factors by Category', engine='openpyxl')
 # Realizar las operaciones que desees en cada DataFrame
@@ -102,9 +101,11 @@ df_final['emission_source'] = df_final['Level 2'].astype(str).str.replace(" ", "
 # Cargar el archivo Excel con labels y URLs
 ruta_labels = os.path.join(script_dir, "../../auxiliary_op/unique_values_wikidata_urls.xlsx")
 df_labels = pd.read_excel(ruta_labels, engine='openpyxl')
+df_labels['label_url'] = df_labels['label_url'].str.strip()
 
 # Crear diccionario de labels y sus URLs
 tuplas = dict(zip(df_labels['label'], df_labels['label_url']))
+
 # Extraer los valores de URL para las columnas en df_final que terminan en '_wd'
 for col in df_final.columns:
     if col.endswith('_wd'):
@@ -200,6 +201,6 @@ if 'id' in df_final.columns and df_final['id'].isnull().all():
 df_final = df_final.drop(columns=['emission_target_formula_aux'])
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Guardar en Excel
-ruta_final = os.path.join(script_dir, f"../data/Conversion_Factor_{year_dataset}.xlsx")
-df_final.to_excel(ruta_final, index=False)
+ruta_final = os.path.join(script_dir, f"../data/v3/Conversion_Factor_{year_dataset}_v3.csv")
+df_final.to_csv(ruta_final, index=False)
 print("lineas finales", df_final.shape[0])

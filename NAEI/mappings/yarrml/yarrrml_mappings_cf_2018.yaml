@@ -11,7 +11,7 @@ prefixes:
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
 sources:
-  main-source: ['data/Conversion_Factor_2018.xlsx']
+  main-source: ['data/v3/Conversion_Factor_2018.csv']
   gwp-source: ['GWP/GWP_values.xlsx']
 mappings:
   CF:

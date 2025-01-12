@@ -11,7 +11,7 @@ prefixes:
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
 sources:
-  main-source: ['data/Conversion_Factor_2016.xlsx']
+  main-source: ['data/v3/Conversion_Factor_2016_v3.csv']
   gwp-source: ['GWP/GWP_values.xlsx']
 mappings:
   CF:
@@ -35,7 +35,7 @@ mappings:
       - [ecfo:hasApplicableLocation, $(region_wd)~iri]
       - [ecfo:hasGWP, ecfo_gwp:$(GWP_id)~iri]
       - [dc:publisher, https://w3id.org/ecfkg/i/Organization/BEIS~iri]
-      - [prov:wasDerivedFrom, https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/635634/Conversion_factors_2017_-_Flat_file__for_automatic_processing_only__v02-....xls, xsd:anyURI]
+      - [prov:wasDerivedFrom, https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/635634/2016_Flat_format_file_v01-01.xlsx, xsd:anyURI]
 
   Agent:
     sources:
