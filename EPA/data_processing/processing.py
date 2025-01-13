@@ -1,86 +1,79 @@
+```python
 import pandas as pd
 from datetime import datetime
 import os
 
-# Función personalizada para obtener la segunda fórmula si existe, de lo contrario devuelve la primera
-def obtener_formula(text):
+# Custom function to get the second formula if it exists, otherwise return the first
+def get_formula(text):
     if len(text) > 1:
         if text.split()[0] in ['kg', 'g', 'lb']:
             return text.split()[1]
         else:
             return text.split()[0]
     else:
-        return text  # Si no, devuelve la primera
+        return text  # If not, return the first
 
-# Función para quitar net/gross CV para poder poner la URL de wikidata posteriormente
-def limpiar_parentesis(text):
+# Function to remove net/gross CV to add the Wikidata URL later
+def clean_parentheses(text):
     if '(' in text:
-        return text.split('(')[0].strip()  # Toma la parte antes del paréntesis y elimina espacios
+        return text.split('(')[0].strip()  # Takes the part before the parentheses and removes spaces
     else:
-        return text.strip()  # Si no hay paréntesis, devuelve el texto original sin espacios adicionales
+        return text.strip()  # If there are no parentheses, returns the original text without additional spaces
 
-# Modificar la columna 'region' basada en 'emission_source'
-def obtener_region(emission_source):
+# Modify the 'region' column based on 'emission_source'
+def get_region(emission_source):
     if emission_source.startswith('Hotel_stay'):
-        # Eliminar el prefijo 'Hotel_stay_' y reemplazar '_' por espacios
+        # Remove the 'Hotel_stay_' prefix and replace '_' with spaces
         return emission_source.replace('Hotel_stay_', '').replace('_', ' ')
     else:
         return 'United States'
 
-def calcular_gwp(row, year_dataset, valor):
-    #filtrar por año
+def calculate_gwp(row, year_dataset, value):
+    # Filter by year
     relevant_gwp = df_GWP[(df_GWP['start'] <= year_dataset) & (df_GWP['end'] >= year_dataset)]
-    # duplas
     gwp_dict = dict(zip(relevant_gwp["emission_source"], relevant_gwp["value"]))
-    #print(row)
-    return gwp_dict.get(row["emission_target_formula_aux"], valor)
+    return gwp_dict.get(row["emission_target_formula_aux"], value)
 
-def id_gwp(row, year_dataset, valor):
-    #filtrar por año
+def id_gwp(row, year_dataset, value):
+    # Filter by year
     relevant_gwp = df_GWP[(df_GWP['start'] <= year_dataset) & (df_GWP['end'] >= year_dataset)]
-    # duplas
     gwp_dict = dict(zip(relevant_gwp["emission_source"], relevant_gwp["id"]))
-    #print(row)
-    return gwp_dict.get(row["emission_target_formula_aux"], valor)
+    return gwp_dict.get(row["emission_target_formula_aux"], value)
         
 def conversion_units(unit, conversion_value):
-    # Ajustar valores de 'Conversion Factor 2024' y cambiar 'GHG' de 'g' a 'kg'
-    mask = df_final['GHG'] == unit  # Máscara para las filas donde 'GHG' es la unidad indicada
-    df_final.loc[mask, 'Conversion Factor 2024'] /= conversion_value  # Dividir entre 1000
-    df_final.loc[mask, 'GHG'] = 'kg'  # Cambiar la unidad a 'kg'
+    # Adjust values of 'Conversion Factor 2024' and change 'GHG' from 'g' to 'kg'
+    mask = df_final['GHG'] == unit
+    df_final.loc[mask, 'Conversion Factor 2024'] /= conversion_value
+    df_final.loc[mask, 'GHG'] = 'kg'
 
-    # Cambiar 'GHG/Unit' si comienza con 'g ' a 'kg'
-    mask_ghg_unit = df_final['GHG/Unit'].str.startswith(f'{unit} ', na=False)  # Máscara para 'g ' al inicio
+    mask_ghg_unit = df_final['GHG/Unit'].str.startswith(f'{unit} ', na=False)
     df_final.loc[mask_ghg_unit, 'GHG/Unit'] = df_final['GHG/Unit'].str.replace(f'^{unit} ', 'kg ', regex=True)
 
-# Ruta al archivo de Excel
+# Path to the Excel file
 script_dir = os.path.dirname(os.path.abspath(__file__))
-ruta = os.path.join(script_dir, "../data_raw/EPA_raw.xlsx")
-df_raw = pd.read_excel(ruta, sheet_name='Sheet1', engine='openpyxl')
+path = os.path.join(script_dir, "../data_raw/EPA_raw.xlsx")
+df_raw = pd.read_excel(path, sheet_name='Sheet1', engine='openpyxl')
 
-#GWP
-ruta_GWP_values = os.path.join(script_dir, "../../GWP/GWP_values.xlsx")
-df_GWP = pd.read_excel(ruta_GWP_values, engine='openpyxl')
+# GWP
+path_GWP_values = os.path.join(script_dir, "../../GWP/GWP_values.xlsx")
+df_GWP = pd.read_excel(path_GWP_values, engine='openpyxl')
 
-# Cargar el archivo Excel con labels y URLs
-ruta_labels = os.path.join(script_dir, "../../auxiliary_op/unique_values_wikidata_urls.xlsx")
-df_labels = pd.read_excel(ruta_labels, engine='openpyxl')
+# Load the Excel file with labels and URLs
+path_labels = os.path.join(script_dir, "../../auxiliary_op/unique_values_wikidata_urls.xlsx")
+df_labels = pd.read_excel(path_labels, engine='openpyxl')
 
-cabeceras = df_raw.columns
-
-df_final = pd.DataFrame(columns=cabeceras)
-if 'GHG/Unit' in cabeceras:
-    ghg_label='GHG/Unit'
-else:
-    ghg_label='GHG'
+headers = df_raw.columns
+df_final = pd.DataFrame(columns=headers)
+ghg_label = 'GHG/Unit' if 'GHG/Unit' in headers else 'GHG'
 df_final.pop(ghg_label)
 
-# Llenar df_final con los datos de df_raw
+# Populate df_final with data from df_raw
 for j in range(len(df_raw)):
-    fila = df_raw.iloc[j].values.tolist()
-    fila = fila[:len(cabeceras)]  # Asegurar que la fila tenga la misma longitud que 'cabeceras'
-    df_final.loc[j, cabeceras[:len(fila)]] = fila
-print("lineas iniciales", df_final.shape[0])
+    row = df_raw.iloc[j].values.tolist()
+    row = row[:len(headers)]
+    df_final.loc[j, headers[:len(row)]] = row
+
+print("Initial lines", df_final.shape[0])
 
 df_raw[ghg_label] = df_raw[ghg_label].astype(str)
 year_dataset = 2024
@@ -89,156 +82,127 @@ df_final['Scope'] = df_final['Scope'].astype(str).str.replace(' ', '', regex=Fal
 df_final.insert(7, "emission_source", None)
 df_final['emission_source'] = df_final['Level 2'].astype(str).str.replace(" ", "_", regex=False) + "_" + df_final['Level 3'].astype(str).str.replace(" ", "_", regex=False)
 
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Crear diccionario de labels y sus URLs
+# Create a dictionary of labels and their URLs
 tuplas = dict(zip(df_labels['label'], df_labels['label_url']))
-# Extraer los valores de URL para las columnas en df_final que terminan en '_wd'
+
+# Map URL values for columns ending with '_wd'
 for col in df_final.columns:
     if col.endswith('_wd'):
-        # Obtener la columna base sin '_wd' y reemplazarla por sus URLs del diccionario
         base_col = col[:-3]
         df_final[col] = df_final[base_col].map(tuplas).fillna('-')
 
-# ---------------------- Otras transformaciones ----------------------
-
+# ---------------------- Other transformations ----------------------
 df_final['UOM'] = df_final['UOM'].fillna('').astype(str)
-df_final['UOM'] = df_final['UOM'].apply(limpiar_parentesis)
-print("lineas 1 ", df_final.shape[0])
+df_final['UOM'] = df_final['UOM'].apply(clean_parentheses)
+print("Lines 1", df_final.shape[0])
 
-# Crear la columna 'UOM_wd' mapeando los valores de 'UOM' al diccionario de labels y URLs (tuplas)
+# Create 'UOM_wd' column by mapping UOM values to URLs
 df_final['UOM_wd'] = df_final['UOM'].map(tuplas)
-# Reordenar las columnas para que 'UOM_wd' aparezca justo después de 'UOM'
-columnas = list(df_final.columns)
-indice_uom = columnas.index('UOM')
-# Insertar 'UOM_wd' después de 'UOM'
-columnas.insert(indice_uom + 1, columnas.pop(columnas.index('UOM_wd')))
-df_final = df_final[columnas]
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Extraer y limpiar 'emission_target_formula'
-df_final['emission_target_formula'] = df_raw[ghg_label].apply(obtener_formula)
-df_final['emission_target_formula'] = df_final['emission_target_formula'].replace('nan', None)
-# Sustituir 'mmBtu' por una cadena vacía en la columna 'emission_target_formula'
-df_final['emission_target_formula'] = df_final['emission_target_formula'].str.replace('mmBtu', '', regex=False)
+columns = list(df_final.columns)
+index_uom = columns.index('UOM')
+columns.insert(index_uom + 1, columns.pop(columns.index('UOM_wd')))
+df_final = df_final[columns]
 
-# Limpiar valores de paréntesis en ambas columnas
+# Extract and clean 'emission_target_formula'
+df_final['emission_target_formula'] = df_raw[ghg_label].apply(get_formula)
+df_final['emission_target_formula'] = df_final['emission_target_formula'].replace('nan', None)
+df_final['emission_target_formula'] = df_final['emission_target_formula'].str.replace('mmBtu', '', regex=False)
 df_final[ghg_label] = df_raw[ghg_label]
-print("lineas 2", df_final.shape[0])
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Cargar el archivo Excel con las formulas y sus respectivas nomenclaturas
-ruta_nomen = os.path.join(script_dir, "../../auxiliary_op/formulas.xlsx")
-df_nomen = pd.read_excel(ruta_nomen, engine='openpyxl')
+print("Lines 2", df_final.shape[0])
+
+# Load the Excel file with formulas and nomenclatures
+path_nomen = os.path.join(script_dir, "../../auxiliary_op/formulas.xlsx")
+df_nomen = pd.read_excel(path_nomen, engine='openpyxl')
 
 df_final['emission_target_formula_aux'] = df_final['emission_target_formula'].str.split().str[-1]
-# Crear diccionario de labels y sus URLs
-tuplas_nomen = dict(zip(df_nomen['formula'], df_nomen['nomenclatura']))
+tuplas_nomen = dict(zip(df_nomen['formula'], df_nomen['nomenclature']))
 df_final['emission_target'] = df_final['emission_target_formula_aux'].map(tuplas_nomen)
 df_final = df_final.dropna(subset=['emission_target_formula'])
 
 df_final['emission_target_wd'] = df_final['emission_target_formula_aux'].map(tuplas)
-print("lineas 3", df_final.shape[0])
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Extraer 'GHG' del campo 'GHG/Unit'
+print("Lines 3", df_final.shape[0])
+
+# Extract 'GHG' from the 'GHG/Unit' field
 df_final['GHG/Unit'] = df_final['GHG/Unit'].str.replace(' per unit', '', regex=False)
 df_final = df_final[~df_final['GHG/Unit'].str.contains('mmBtu', na=False)]
 
 df_final['GHG'] = df_raw[ghg_label].str.split().str[0]
 df_final['GHG'] = df_final['GHG'].replace('nan', None)
-# Identificar las filas donde df_final['GHG'] es igual a 'kWh'
-filas_a_eliminar = df_final[df_final['GHG'] == 'kWh'].index
+
+# Convert units
 conversion_units('g', 1000)
 conversion_units('lb', 2.20462)
 
-# Eliminar las filas de esas posiciones
-df_final = df_final.drop(filas_a_eliminar)
+# Remove rows where GHG equals 'kWh'
+rows_to_delete = df_final[df_final['GHG'] == 'kWh'].index
+df_final = df_final.drop(rows_to_delete)
+
 df_final['GHG_wd'] = df_final['GHG'].map(tuplas)
-# Establecer las columnas de validez de fecha
 df_final['valid_from'] = datetime(year_dataset, 1, 1, 0, 0, 0).isoformat()
 df_final['valid_to'] = datetime(year_dataset, 12, 31, 23, 59, 59).isoformat()
-print("lineas 4 ", df_final.shape[0])
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Aplicar la función a la columna 'region'
-df_final['region'] = df_final['emission_source'].apply(obtener_region)
+print("Lines 4", df_final.shape[0])
+
+# Apply the function to the 'region' column
+df_final['region'] = df_final['emission_source'].apply(get_region)
 df_final['region_wd'] = df_final['region'].map(tuplas)
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Asegurarse de que los valores son de tipo string para usar .str.replace() y luego convertir a numérico
+
 df_final[f'Conversion Factor {year_dataset}'] = df_final[f'Conversion Factor {year_dataset}'].astype(str)
 df_final[f'Conversion Factor {year_dataset}'] = pd.to_numeric(df_final[f'Conversion Factor {year_dataset}'].str.replace(',', '', regex=False), errors='coerce')
-print("lineas 5 ", df_final.shape[0])
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Eliminar filas con NaN en 'Conversion Factor {year_dataset}'
+print("Lines 5", df_final.shape[0])
+
+# Remove rows with NaN in 'Conversion Factor {year_dataset}'
 df_final = df_final.dropna(subset=[f'Conversion Factor {year_dataset}'])
-print("lineas 6 ", df_final.shape[0])
-# Mover 'Conversion Factor {year_dataset}' a la última posición
-columna_conversion_factor = f'Conversion Factor {year_dataset}'
-columnas = [col for col in df_final.columns if col != columna_conversion_factor] + [columna_conversion_factor]
-df_final = df_final[columnas]
+print("Lines 6", df_final.shape[0])
 
-# Renombrar la columna y asegurar tipo string
+# Move 'Conversion Factor {year_dataset}' to the last position
+conversion_factor_column = f'Conversion Factor {year_dataset}'
+columns = [col for col in df_final.columns if col != conversion_factor_column] + [conversion_factor_column]
+df_final = df_final[columns]
+
+# Rename and clean column names
 df_final.columns = df_final.columns.str.strip()
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-df_final['GWP'] = df_final.apply(lambda row: calcular_gwp(row, year_dataset,1), axis=1)
-df_final[f'Value {year_dataset}'] = df_final[f'Conversion Factor {year_dataset}']  * df_final['GWP']
-df_final['GWP'] = df_final.apply(lambda row: calcular_gwp(row, year_dataset,''), axis=1)
-df_final['GWP_id'] = df_final.apply(lambda row: id_gwp(row, year_dataset,''), axis=1)
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Añadimos CO2e al DataFrame
-# Agrupar por 'emission_source'
-grupos = df_final.groupby('emission_source')
-nuevas_filas = []
 
-# Recorrer cada grupo
-for emission_source, grupo in grupos:
-    # Sumar 'Conversion Factor 2024'
-    suma_conversion = grupo['Conversion Factor 2024'].sum()
+df_final['GWP'] = df_final.apply(lambda row: calculate_gwp(row, year_dataset, 1), axis=1)
+df_final[f'Value {year_dataset}'] = df_final[f'Conversion Factor {year_dataset}'] * df_final['GWP']
+df_final['GWP'] = df_final.apply(lambda row: calculate_gwp(row, year_dataset, ''), axis=1)
+df_final['GWP_id'] = df_final.apply(lambda row: id_gwp(row, year_dataset, ''), axis=1)
 
-    # Crear una nueva fila con los datos de la última fila del grupo
-    ultima_fila = grupo.iloc[-1].copy()
-    nueva_fila = ultima_fila.copy()
-    
-    # Modificar la nueva fila
-    if pd.notna(ultima_fila['GHG/Unit']):  # Verifica que no sea NaN
-        palabras = str(ultima_fila['GHG/Unit']).split(' ')
-        if len(palabras) > 1:  # Asegura que haya al menos dos palabras
-            palabras[1] = 'CO2e'  # Sustituye la segunda palabra
-            nueva_fila['GHG/Unit'] = ' '.join(palabras)
+# Add CO2e rows to DataFrame
+groups = df_final.groupby('emission_source')
+new_rows = []
+
+for emission_source, group in groups:
+    sum_conversion = group['Conversion Factor 2024'].sum()
+    last_row = group.iloc[-1].copy()
+    new_row = last_row.copy()
+    if pd.notna(last_row['GHG/Unit']):
+        words = str(last_row['GHG/Unit']).split(' ')
+        if len(words) > 1:
+            words[1] = 'CO2e'
+            new_row['GHG/Unit'] = ' '.join(words)
     else:
-        nueva_fila['GHG/Unit'] = 'kg CO2e'  # Valor por defecto si 'GHG/Unit' es NaN
-    
-    nueva_fila['Conversion Factor 2024'] = suma_conversion
+        new_row['GHG/Unit'] = 'kg CO2e'
 
-    # Calcular el nuevo valor para 'emission_target_formula'
-    nueva_fila['emission_target_formula'] = 'CO2e'
+    new_row['Conversion Factor 2024'] = sum_conversion
+    new_row['emission_target_formula'] = 'CO2e'
+    new_row['emission_target'] = tuplas_nomen.get('CO2e', None)
+    new_row['emission_target_wd'] = tuplas.get('CO2e', None)
+    new_row['GWP'] = None
+    new_row['GWP_id'] = None
+    new_row[f'Value {year_dataset}'] = new_row['Conversion Factor 2024']
+    new_rows.append((group.index[-1], new_row))
 
-    # Mapear la nueva fórmula en 'emission_target' y 'emission_target_wd'
-    nueva_fila['emission_target'] = tuplas_nomen.get('CO2e', None)
-    nueva_fila['emission_target_wd'] = tuplas.get('CO2e', None)
+for index, row in sorted(new_rows, reverse=True):
+    df_final = pd.concat([df_final.iloc[:index + 1], pd.DataFrame([row]), df_final.iloc[index + 1:]]).reset_index(drop=True)
 
-    # Calcular GWP
-    nueva_fila['GWP'] = None
-    nueva_fila['GWP_id'] = None
-
-    # Calcular el nuevo valor para 'Value {year_dataset}'
-    nueva_fila[f'Value {year_dataset}'] = nueva_fila['Conversion Factor 2024']
-
-    # Agregar la nueva fila al DataFrame original antes de cambiar de 'emission_source'
-    nuevas_filas.append((grupo.index[-1], nueva_fila))
-
-# Insertar las nuevas filas en el DataFrame original
-for index, fila in sorted(nuevas_filas, reverse=True):
-    # Paso 1: Concatenar las filas
-    df_final = pd.concat([df_final.iloc[:index + 1], pd.DataFrame([fila]), df_final.iloc[index + 1:]]).reset_index(drop=True)
-
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Eliminar la columna emission_target_formula_aux
 df_final = df_final.drop(columns=['emission_target_formula_aux'])
 
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Si se añadió 'id' manualmente en 'cabeceras', generar valores de ID
+# Generate ID if 'id' column exists
 if 'id' in df_final.columns:
     df_final['id'] = range(1, len(df_final) + 1)
 
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Guardar en Excel
-ruta_final = os.path.join(script_dir, f"../data/Conversion_Factor_{year_dataset}.xlsx")
-df_final.to_excel(ruta_final, index=False)
-print("lineas finales", df_final.shape[0])
+# Save to Excel
+final_path = os.path.join(script_dir, f"../data/Conversion_Factor_{year_dataset}.xlsx")
+df_final.to_excel(final_path, index=False)
+print("Final lines", df_final.shape[0])
+```

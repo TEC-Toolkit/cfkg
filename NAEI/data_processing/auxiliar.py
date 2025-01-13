@@ -1,42 +1,41 @@
-from datetime import datetime
 import pandas as pd
 import os
 
-def limpiar_parentesis(text):
-    if not isinstance(text, str):  # Verificar si no es una cadena
-        return text  # Devolver el valor original si no es una cadena
+def clean_parentheses(text):
+    if not isinstance(text, str):  # Check if not a string
+        return text  # Return the original value if it's not a string
     if '(' in text:
-        return text.split('(')[0].strip()  # Toma la parte antes del paréntesis y elimina espacios
+        return text.split('(')[0].strip()  # Take the part before parentheses and remove spaces
     else:
-        return text.strip()  # Si no hay paréntesis, devuelve el texto original sin espacios adicionales
+        return text.strip()  # If no parentheses, return the original text without extra spaces
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-ruta = os.path.join(script_dir, "../data_raw/export.xlsx")
+path = os.path.join(script_dir, "../data_raw/export.xlsx")
 
-# Leer el archivo Excel
+# Read the Excel file
 try:
-    df = pd.read_excel(ruta, sheet_name='export', engine='openpyxl')
+    df = pd.read_excel(path, sheet_name='export', engine='openpyxl')
 except Exception as e:
-    print(f"Error al leer el archivo Excel: {e}")
+    print(f"Error reading the Excel file: {e}")
     exit()
 
-# Verificar si la columna de años existe
+# Check if the 'Year' column exists
 if 'Year' not in df.columns:
-    print(f"Error: La columna 'Year' no existe en el archivo Excel.")
+    print(f"Error: The 'Year' column does not exist in the Excel file.")
     exit()
 
-# Obtener los años únicos
+# Get unique years
 years = df['Year'].unique()
 
-# Lista para almacenar los valores únicos de UOM
-uom_unicos = set()
+# List to store unique UOM values
+unique_uom = set()
 
-# Filtrar y guardar la información por año
+# Filter and save information by year
 for year in years:
     try:
-        df_year = df[df['Year'] == year].copy()  # Crear una copia del DataFrame filtrado
+        df_year = df[df['Year'] == year].copy()  # Create a copy of the filtered DataFrame
         
-        # Renombrar columnas
+        # Rename columns
         rename_cols = {
             'Pollutant': 'emission_target',
             'Sector': 'Level 1',
@@ -48,14 +47,8 @@ for year in years:
         }
         df_year.rename(columns=rename_cols, inplace=True)
         
-        # Recoger los valores únicos de la columna UOM del año actual
-        uom_unicos.update(df_year['UOM'].dropna().unique())
+        # Collect unique values from the current year's UOM column
+        unique_uom.update(df_year['UOM'].dropna().unique())
         print(df_year.columns)
     except Exception as e:
-        print(f"Error al procesar el año {year}: {e}")
-"""
-# Imprimir los valores únicos de UOM, uno por línea
-print("Valores únicos de UOM:")
-for uom in sorted(uom_unicos):
-    print(uom)
-"""
+        print(f"Error processing year {year}: {e}")

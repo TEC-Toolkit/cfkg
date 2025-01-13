@@ -16,9 +16,6 @@ for %%f in (cf_*_v3.ini) do (
     )
 )
 
-REM Ejecutar el script para limpiar archivos malformados
-py malformacion_lineas_nt.py
-
 REM Procesar los archivos .nt
 
 @echo off

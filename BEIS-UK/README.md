@@ -7,3 +7,4 @@ Steps needed to create the RDF in TTL:
 4. install `rdflib`. 
 5. Morph-kgc will produce an output file in n-triples. These are lengthy, so the script nt_to_ttl transforms them into turtle files. Usage: `python nt_to_ttl.py source_file.nt target_file.ttl`. The result will be the target ttl file.
 
+To generate ttl files, .bat file must be executed (in case of a Windows operating system)
