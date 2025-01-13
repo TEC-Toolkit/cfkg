@@ -1,4 +1,3 @@
-```python
 import re
 import pandas as pd
 import warnings
@@ -243,4 +242,3 @@ print(df_final['id'].max())
 df_final = df_final.sort_values(by='id').reset_index(drop=True)
 final_path = os.path.join(script_dir, f"../data_raw/EPA_raw.xlsx")
 df_final.to_excel(final_path, index=False)
-```

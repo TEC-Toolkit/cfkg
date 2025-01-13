@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 from datetime import datetime
 import os
@@ -198,4 +197,3 @@ df_final = df_final.drop(columns=['emission_target_formula_aux'])
 final_path = os.path.join(script_dir, f"../data/v3/Conversion_Factor_{year_dataset}.csv")
 df_final.to_csv(final_path, index=False)
 print("Final lines", df_final.shape[0])
-```

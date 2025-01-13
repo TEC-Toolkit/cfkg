@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 from datetime import datetime
 import os
@@ -205,4 +204,3 @@ if 'id' in df_final.columns:
 final_path = os.path.join(script_dir, f"../data/Conversion_Factor_{year_dataset}.xlsx")
 df_final.to_excel(final_path, index=False)
 print("Final lines", df_final.shape[0])
-```
