@@ -60,4 +60,4 @@ Have a look at [our tutorial](tutorial/Using_CFKG_Evolution_of_Conversion_Factor
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to this repository. 
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to this repository.
